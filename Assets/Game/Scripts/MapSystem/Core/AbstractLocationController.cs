@@ -4,8 +4,9 @@ using UnityEngine;
 
 public abstract class AbstractLocationController : MonoBehaviour
 {
-    [SerializeField] private GameObject m_view;
-    [SerializeField] private List<AbstractLocationCallback> m_callbacks;
+    [SerializeField] protected GameObject m_view;
+    [SerializeField] private List<AbstractLocationCallback> m_enterCallbacks;
+    [SerializeField] private List<AbstractLocationCallback> m_exitCallbacks;
 
     protected IGameContext m_gameContext;
     protected ILocationManager m_locationManager;
@@ -20,18 +21,16 @@ public abstract class AbstractLocationController : MonoBehaviour
 
     public void Enter()
     {
-        m_view.SetActive(true);
-
+        m_enterCallbacks.ForEach(callback => callback.HandleEnterLocation(m_gameContext));
         HandleEnterInternal();
-
-        m_callbacks.ForEach(callback => callback.HandleEnterLocation(m_gameContext));
+        m_view.SetActive(true);
     }
 
     public void Exit()
     {
-        m_view.SetActive(false);
-
+        m_exitCallbacks.ForEach(callback => callback.HandleExitLocation(m_gameContext));
         HandleExitInternal();
+        m_view.SetActive(false);
     }
 
     public abstract void HandleEnterInternal();

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hanging Chandelier Medieval
+* source:	https://sketchfab.com/3d-models/hanging-chandelier-medieval-11f07326f25642738254c392ddfd974a
+* author:	attilakozma (https://sketchfab.com/attilakozma)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hanging Chandelier Medieval" (https://sketchfab.com/3d-models/hanging-chandelier-medieval-11f07326f25642738254c392ddfd974a) by attilakozma (https://sketchfab.com/attilakozma) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

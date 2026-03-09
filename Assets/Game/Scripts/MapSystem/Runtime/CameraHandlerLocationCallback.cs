@@ -10,4 +10,9 @@ public class CameraHandlerLocationCallback : AbstractLocationCallback
         
         cameraManager.MoveCamera(m_cameraPivot.position, m_cameraPivot.rotation);
     }
+
+    public override void HandleExitLocation(IGameContext gameContext)
+    {
+        return;
+    }
 }

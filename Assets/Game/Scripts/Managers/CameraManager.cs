@@ -18,8 +18,6 @@ public class CameraManager : MonoBehaviour
 
         var accumTime = 0f;
 
-        Debug.Log($"{startPosition} {startRotation}  {targetPosition}  {targetRotation}");
-
         while (accumTime < m_moveDuration)
         {
             var t = accumTime / m_moveDuration;
@@ -28,7 +26,7 @@ public class CameraManager : MonoBehaviour
             m_cameraTransform.rotation = Quaternion.Lerp(startRotation, targetRotation, t);
 
             accumTime += Time.deltaTime;
-            Debug.Log($"{accumTime} {t}");
+
             yield return null;
         }
 

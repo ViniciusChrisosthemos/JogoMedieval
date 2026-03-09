@@ -23,7 +23,10 @@ public class MapManager : MonoBehaviour, ILocationManager
 
     public void MoveTo(AbstractLocationController locationController)
     {
-        m_currentLocation.Exit();
+        if (!(locationController is SubLocationController) || ((m_currentLocation is SubLocationController) && (locationController is SubLocationController)))
+        {
+            m_currentLocation.Exit();
+        }
 
         m_currentLocation = locationController;
 

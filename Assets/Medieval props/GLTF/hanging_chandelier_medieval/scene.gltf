@@ -1,0 +1,833 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 148,
+      "max": [
+        0.07912922650575638,
+        0.07855347543954849,
+        0.2095358967781067
+      ],
+      "min": [
+        -0.07704523205757141,
+        -0.07880979031324387,
+        -0.20151153206825256
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1776,
+      "componentType": 5126,
+      "count": 148,
+      "max": [
+        0.9999977946281433,
+        0.9999862909317017,
+        0.9993983507156372
+      ],
+      "min": [
+        -0.9999613761901855,
+        -0.9999942183494568,
+        -0.9999978542327881
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 148,
+      "max": [
+        0.9125011563301086,
+        0.9739023447036743
+      ],
+      "min": [
+        0.024460792541503906,
+        0.026097744703292847
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 390,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 3552,
+      "componentType": 5126,
+      "count": 8592,
+      "max": [
+        0.02183014154434204,
+        0.09923183917999268,
+        0.04200556501746178
+      ],
+      "min": [
+        -0.02183024026453495,
+        -0.1000826507806778,
+        -0.8749189376831055
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 106656,
+      "componentType": 5126,
+      "count": 8592,
+      "max": [
+        1.0,
+        1.0,
+        0.9307902455329895
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.9307903051376343
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1184,
+      "componentType": 5126,
+      "count": 8592,
+      "max": [
+        0.9993417859077454,
+        0.9961839914321899
+      ],
+      "min": [
+        0.0006581547204405069,
+        0.000658134464174509
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1560,
+      "componentType": 5125,
+      "count": 14976,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 209760,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        0.25230857729911804,
+        0.09004639834165573,
+        0.07523465156555176
+      ],
+      "min": [
+        0.0,
+        -0.06523142009973526,
+        -0.4299885034561157
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 231840,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 69920,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        0.9960918426513672,
+        0.9529896974563599
+      ],
+      "min": [
+        0.0030629709362983704,
+        0.021484464406967163
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 61464,
+      "componentType": 5125,
+      "count": 4494,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 253920,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        0.0,
+        0.09004639834165573,
+        0.07523465156555176
+      ],
+      "min": [
+        -0.25230857729911804,
+        -0.06523142009973526,
+        -0.4299885034561157
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 276000,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 84640,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        0.9960918426513672,
+        0.9529896974563599
+      ],
+      "min": [
+        0.0030629709362983704,
+        0.021484464406967163
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 79440,
+      "componentType": 5125,
+      "count": 4494,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 298080,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        0.25230857729911804,
+        0.09004639834165573,
+        0.07523465156555176
+      ],
+      "min": [
+        0.0,
+        -0.06523142009973526,
+        -0.4299885034561157
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 320160,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 99360,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        0.9960918426513672,
+        0.9529896974563599
+      ],
+      "min": [
+        0.0030629709362983704,
+        0.021484464406967163
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 97416,
+      "componentType": 5125,
+      "count": 4494,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 342240,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        0.0,
+        0.09004639834165573,
+        0.07523465156555176
+      ],
+      "min": [
+        -0.25230857729911804,
+        -0.06523142009973526,
+        -0.4299885034561157
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 364320,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 114080,
+      "componentType": 5126,
+      "count": 1840,
+      "max": [
+        0.9960918426513672,
+        0.9529896974563599
+      ],
+      "min": [
+        0.0030629709362983704,
+        0.021484464406967163
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 115392,
+      "componentType": 5125,
+      "count": 4494,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "attilakozma (https://sketchfab.com/attilakozma)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/hanging-chandelier-medieval-11f07326f25642738254c392ddfd974a",
+      "title": "Hanging Chandelier Medieval"
+    },
+    "generator": "Sketchfab-15.30.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 133368,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 128800,
+      "byteOffset": 133368,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 386400,
+      "byteOffset": 262168,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 648568,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
+  "images": [
+    {
+      "uri": "textures/Lantern_B_wood_baseColor.png"
+    },
+    {
+      "uri": "textures/Lantern_B_wood_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Lantern_B_chain_baseColor.png"
+    },
+    {
+      "uri": "textures/Lantern_B_chain_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Lantern_B_lamps_baseColor.png"
+    },
+    {
+      "uri": "textures/Lantern_B_lamps_metallicRoughness.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.14476234594238763
+        }
+      },
+      "name": "Lantern_B_wood",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.17523862929867975
+        }
+      },
+      "name": "Lantern_B_chain",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "metallicRoughnessTexture": {
+          "index": 3
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.13257183259987076
+        }
+      },
+      "name": "Lantern_B_lamps",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 4
+        },
+        "metallicRoughnessTexture": {
+          "index": 5
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Lantern B Wood base_Lantern B wood_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Lantern B chain_Lantern B chain_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Lantern B 1_Lantern B lamps_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Lantern B 3_Lantern B lamps_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Lantern B 2_Lantern B lamps_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 17,
+            "POSITION": 16,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Lantern B 4_Lantern B lamps_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 21,
+            "POSITION": 20,
+            "TEXCOORD_0": 22
+          },
+          "indices": 23,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "f20414c53a5142a7ad31b3cc354189d9.fbx"
+    },
+    {
+      "children": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        429.335205078125,
+        0.0,
+        1.0
+      ],
+      "name": "Lantern B Wood base"
+    },
+    {
+      "mesh": 0,
+      "name": "Lantern B Wood base_Lantern B wood_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        4.331257681400302e-05,
+        1.1102230246251565e-14,
+        99.99999999999062,
+        0.0,
+        99.99999999999054,
+        -4.371139006309477e-06,
+        -4.331257681955414e-05,
+        0.0,
+        4.371138995207247e-06,
+        99.99999999999991,
+        -1.9095836023552692e-12,
+        0.0,
+        0.15915735065937042,
+        529.1912841796875,
+        1.4488236047327518e-05,
+        1.0
+      ],
+      "name": "Lantern B chain"
+    },
+    {
+      "mesh": 1,
+      "name": "Lantern B chain_Lantern B chain_0"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        7.404980182647705,
+        432.52978515625,
+        0.9837554097175598,
+        1.0
+      ],
+      "name": "Lantern B 1"
+    },
+    {
+      "mesh": 2,
+      "name": "Lantern B 1_Lantern B lamps_0"
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        -6.819231986999512,
+        435.4239501953125,
+        0.9837554097175598,
+        1.0
+      ],
+      "name": "Lantern B 3"
+    },
+    {
+      "mesh": 3,
+      "name": "Lantern B 3_Lantern B lamps_0"
+    },
+    {
+      "children": [
+        12
+      ],
+      "matrix": [
+        4.371139006309477e-06,
+        -1.1102230246251565e-14,
+        -99.99999999999991,
+        0.0,
+        -99.99999999999982,
+        -4.371139006309477e-06,
+        -4.371139011860592e-06,
+        0.0,
+        -4.371139011860592e-06,
+        99.99999999999991,
+        -1.9984014443252818e-13,
+        0.0,
+        0.9837552905082703,
+        438.5514831542969,
+        -7.3647236824035645,
+        1.0
+      ],
+      "name": "Lantern B 2"
+    },
+    {
+      "mesh": 4,
+      "name": "Lantern B 2_Lantern B lamps_0"
+    },
+    {
+      "children": [
+        14
+      ],
+      "matrix": [
+        4.371139006309477e-06,
+        -1.1102230246251565e-14,
+        -99.99999999999991,
+        0.0,
+        -99.99999999999982,
+        -4.371139006309477e-06,
+        -4.371139011860592e-06,
+        0.0,
+        -4.371139011860592e-06,
+        99.99999999999991,
+        -1.9984014443252818e-13,
+        0.0,
+        0.9837552905082703,
+        438.9010009765625,
+        7.2115278244018555,
+        1.0
+      ],
+      "name": "Lantern B 4"
+    },
+    {
+      "mesh": 5,
+      "name": "Lantern B 4_Lantern B lamps_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}
