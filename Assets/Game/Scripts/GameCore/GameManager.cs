@@ -1,15 +1,19 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private SocialLinkManager m_socialLinkManager;
     [SerializeField] private CameraManager m_cameraManager;
     [SerializeField] private MapManager m_mapManager;
+    [SerializeField] private MainHUDView m_mainHUDView;
 
-    public AbstractLocationController m_location_1;
-    public AbstractLocationController m_location_2;
-    public AbstractLocationController m_location_3;
+    [Header("Debug")]
+    [SerializeField] private List<BaseContractSO> m_initialContracts;
+    [SerializeField] private LevelDataSO m_popularityLevelSO;
+
 
     private GameContext m_gameContext;
 
@@ -17,31 +21,29 @@ public class GameManager : MonoBehaviour
     {
         m_gameContext = new GameContext();
 
-        m_gameContext.AddReference(m_socialLinkManager);
-        m_gameContext.AddReference(m_cameraManager);
-
-        m_mapManager.Setup(m_gameContext);
+        LoadManagers();
 
         m_mapManager.EnterLocation();
+        m_mainHUDView.Setup(this);
     }
 
-    private void Update()
+    private void LoadManagers()
     {
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            m_mapManager.MoveTo(m_location_1);
+        m_gameContext.AddReference(m_socialLinkManager);
+        m_gameContext.AddReference(m_cameraManager);
+        m_gameContext.AddReference(m_mapManager);
 
-            Debug.Log("Q");
-        }
-        else if(Keyboard.current.wKey.wasPressedThisFrame)
-        {
-            m_mapManager.MoveTo(m_location_2);
-            Debug.Log("W");
-        }
-        else if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            m_mapManager.MoveTo(m_location_3);
-            Debug.Log("E");
-        }
+        m_gameContext.AddReference(new PlayerManager());
+
+        var popularityLevelData = LevelFactory.CreateLevelData(m_popularityLevelSO);
+        var guildData = new GuildData(popularityLevelData);
+        m_gameContext.AddReference(new GuildManager(guildData));
+
+        var contracts = ContractFactory.CreateContractData(m_initialContracts);
+        m_gameContext.AddReference(new ContractManager(contracts, new List<BaseContractData>()));
+
+        m_mapManager.Setup(m_gameContext);
     }
+
+    public GameContext GameContext => m_gameContext;
 }

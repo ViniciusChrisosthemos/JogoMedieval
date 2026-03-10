@@ -1,0 +1,44 @@
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ContractManager
+{
+    public List<BaseContractData> AvailableContracts { get; private set; }
+    public List<BaseContractData> OngoingContracts { get; private set; }
+
+    public ContractManager() : this(new List<BaseContractData>(), new List<BaseContractData>()) { }
+
+    public ContractManager(List<BaseContractData> availableContracts, List<BaseContractData> ongoingContracts)
+    {
+        AvailableContracts = availableContracts;
+        OngoingContracts = ongoingContracts;
+    }
+
+    public void AddContracts(BaseContractData contract)
+    {
+        AvailableContracts.Add(contract);
+    }
+
+    public void AccepContract(BaseContractData contract)
+    {
+        AvailableContracts.Remove(contract);
+        OngoingContracts.Add(contract);
+    }
+
+    public void CompleteContract(IGameContext gameContext, BaseContractData contract)
+    {
+        var guildManager = gameContext.GetReference<GuildManager>();
+        guildManager.AddPopularity(contract.RewardData.Popularity);
+
+        var playerManager = gameContext.GetReference<PlayerManager>();
+        playerManager.AddGold(contract.RewardData.Gold);
+        playerManager.AddExperience(contract.RewardData.Exp);
+    }
+
+    public void RefuseContract(BaseContractData contract)
+    {
+        AvailableContracts.Remove(contract);
+    }
+}

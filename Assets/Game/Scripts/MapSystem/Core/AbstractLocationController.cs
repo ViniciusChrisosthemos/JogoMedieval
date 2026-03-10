@@ -1,12 +1,16 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class AbstractLocationController : MonoBehaviour
 {
-    [SerializeField] protected GameObject m_view;
-    [SerializeField] private List<AbstractLocationCallback> m_enterCallbacks;
-    [SerializeField] private List<AbstractLocationCallback> m_exitCallbacks;
+    [SerializeField] private AbstractLocationController m_locationParent;
+    [SerializeField] private GameObject m_subSpotsParent;
+
+    [Header("Events")]
+    public UnityEvent<IGameContext> OnEnterEvent;
+    public UnityEvent<IGameContext> OnExitEvent;
 
     protected IGameContext m_gameContext;
     protected ILocationManager m_locationManager;
@@ -16,22 +20,28 @@ public abstract class AbstractLocationController : MonoBehaviour
         m_gameContext = gameContext;
         m_locationManager = locationManager;
 
-        m_view.SetActive(false);
+        m_subSpotsParent.SetActive(false);
     }
 
     public void Enter()
     {
-        m_enterCallbacks.ForEach(callback => callback.HandleEnterLocation(m_gameContext));
         HandleEnterInternal();
-        m_view.SetActive(true);
+
+        OnEnterEvent?.Invoke(GameManager.Instance.GameContext);
+
+        m_subSpotsParent.SetActive(true);
     }
 
     public void Exit()
     {
-        m_exitCallbacks.ForEach(callback => callback.HandleExitLocation(m_gameContext));
         HandleExitInternal();
-        m_view.SetActive(false);
+
+        OnExitEvent?.Invoke(GameManager.Instance.GameContext);
+
+        m_subSpotsParent.SetActive(false);
     }
+
+    public AbstractLocationController LocationParent => m_locationParent;
 
     public abstract void HandleEnterInternal();
     public abstract void HandleExitInternal();

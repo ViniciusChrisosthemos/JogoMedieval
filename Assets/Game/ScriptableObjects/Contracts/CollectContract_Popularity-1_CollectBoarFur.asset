@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94870d646bcecb744b7a646d7874124c, type: 3}
+  m_Name: CollectContract_Popularity-1_CollectBoarFur
+  m_EditorClassIdentifier: 
+  m_title: Board Hunt
+  m_baseDescription: Kill some board to collect <0,amount> <0,object>.
+  m_rewardData:
+    m_gold: 15
+    m_exp: 10
+    m_popularity: 1
+  m_requiredItems:
+  - m_object: {fileID: 11400000, guid: 4e750b919ce5dbb4f86f75cb67b29003, type: 2}
+    m_amount: 2

@@ -1,9 +1,14 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MapManager : MonoBehaviour, ILocationManager
 {
     [SerializeField] private AbstractLocationController m_startLocation;
     [SerializeField] private Transform m_locationParent;
+
+    [Header("Events")]
+    public UnityEvent<AbstractLocationController> OnChangeLocation;
 
     private AbstractLocationController m_currentLocation;
 
@@ -23,13 +28,20 @@ public class MapManager : MonoBehaviour, ILocationManager
 
     public void MoveTo(AbstractLocationController locationController)
     {
-        if (!(locationController is SubLocationController) || ((m_currentLocation is SubLocationController) && (locationController is SubLocationController)))
-        {
-            m_currentLocation.Exit();
-        }
+        m_currentLocation.Exit();
 
         m_currentLocation = locationController;
 
         EnterLocation();
+
+        OnChangeLocation?.Invoke(m_currentLocation);
+    }
+
+    public void GoBack()
+    {
+        if (m_currentLocation != null && m_currentLocation.LocationParent != null)
+        {
+            MoveTo(m_currentLocation.LocationParent);
+        }
     }
 }
