@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -9,6 +10,16 @@ public class CameraManager : MonoBehaviour
     public void MoveCamera(Vector3 position, Quaternion rotation)
     {
         StartCoroutine(AnimateCameraMovementCoroutine(position, rotation));
+    }
+
+    public void Disable()
+    {
+        m_cameraTransform.gameObject.SetActive(false);
+    }
+
+    internal void Enable()
+    {
+        m_cameraTransform.gameObject.SetActive(true);
     }
 
     private IEnumerator AnimateCameraMovementCoroutine(Vector3 targetPosition, Quaternion targetRotation)

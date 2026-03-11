@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf874d50702d414b8b2c72e7c5f7237, type: 3}
+  m_Name: Character_Red
+  m_EditorClassIdentifier: 
+  CharacterName: Red
+  CharacterIcon: {fileID: -280103976, guid: c808511794678714789b55236aa3375d, type: 3}
+  MaxHealth: 50
+  Agility: 2
+  Skills:
+  - {fileID: 11400000, guid: 146cb3edf90252747837ccf41e6a4ee9, type: 2}
+  ModelReferences: {fileID: 2592706158827747317, guid: 4539cc2f9fc05334a98f6959bb2a091f, type: 3}
