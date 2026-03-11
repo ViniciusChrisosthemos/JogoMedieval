@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -26,7 +27,8 @@ public class GameManager : Singleton<GameManager>
     [Header("Debug")]
     [SerializeField] private List<BaseContractSO> m_initialContracts;
     [SerializeField] private LevelDataSO m_popularityLevelSO;
-
+    [SerializeField] private CharacterSO m_playerCharacter;
+    
 
     private void Start()
     {
@@ -47,7 +49,8 @@ public class GameManager : Singleton<GameManager>
         GameContext.AddReference(m_mapManager);
         GameContext.AddReference(m_dayManager);
         GameContext.AddReference(new CustomSceneManager());
-        GameContext.AddReference(new PlayerManager());
+        GameContext.AddReference(new PlayerManager(m_playerCharacter));
+        GameContext.AddReference(new BattleManager());
 
         var popularityLevelData = LevelFactory.CreateLevelData(m_popularityLevelSO);
         var guildData = new GuildData(popularityLevelData);
@@ -72,12 +75,7 @@ public class GameManager : Singleton<GameManager>
         m_hud.SetActive(false);
     }
 
-    public void TriggerBattleStarted()
-    {
-        Debug.Log("BattleStarted");
-    }
-
-    public async void TriggerBattleEnded()
+    public async Task EndBattle()
     {
         Debug.Log("BattleEnded");
 
@@ -87,8 +85,6 @@ public class GameManager : Singleton<GameManager>
         m_environmentRoot.SetActive(true);
         m_hud.SetActive(true);
     }
-
-
 
     public GameContext GameContext { get; private set; }
 }

@@ -13,7 +13,7 @@ public class DayManager : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.pKey.wasPressedThisFrame) PassTime();
+        //if (Keyboard.current.pKey.wasPressedThisFrame) PassTime();
     }
 
     public void SetDayTime(DayTime dayTime)

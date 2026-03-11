@@ -3626,11 +3626,7 @@ MonoBehaviour:
   m_debug: 1
   m_playerCharacters:
   - {fileID: 11400000, guid: 1726be6266a986e44aa78651bc8d4964, type: 2}
-  - {fileID: 11400000, guid: 12e79ad524b71344990cc71964272cca, type: 2}
-  - {fileID: 11400000, guid: 0e197fd2ca786c34daacc35e147c5d04, type: 2}
   m_enemyCharacters:
-  - {fileID: 11400000, guid: c72c06282898ac54d80d1705cbee2214, type: 2}
-  - {fileID: 11400000, guid: c72c06282898ac54d80d1705cbee2214, type: 2}
   - {fileID: 11400000, guid: c72c06282898ac54d80d1705cbee2214, type: 2}
 --- !u!1 &350185496
 GameObject:

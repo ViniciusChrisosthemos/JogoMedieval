@@ -22,14 +22,11 @@ public class CombatManager : MonoBehaviour
     [Header("Events")]
     public UnityEvent<BattleCharacter> OnTurnChanged;
 
-    [Header("Debug")]
-    [SerializeField] private bool m_debug;
-    [SerializeField] private List<CharacterSO> m_playerCharacters;
-    [SerializeField] private List<CharacterSO> m_enemyCharacters;
-
     private StateMachineController m_stateMachineController;
     private PlayerTurnState m_playerTurnState;
     private EnemyTurnState m_enemyTurnState;
+
+    private BattleResult m_battleResult;
 
     private void Awake()
     {
@@ -43,8 +40,6 @@ public class CombatManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.TriggerBattleStarted();
-
         StartCombat();
     }
 
@@ -117,30 +112,40 @@ public class CombatManager : MonoBehaviour
 
     public void HandleCombatResult()
     {
+        var playerWin = Context.PlayerBattleCharacters.Any(c => c.IsAlive());
+
+        m_battleResult = new BattleResult(playerWin);
+
         Debug.Log("CombatManager Endbattle");
         m_stateMachineController.ChangeState(new EndBattleState(this));
     }
 
-    public BattleResult GetBattleResult()
-    {
-        var playerWin = Context.PlayerBattleCharacters.Any(c => c.IsAlive());
-
-        return new BattleResult(playerWin);
-    }
 
     public void StartCombat()
     {
+        /*
         var playerCharacters = m_playerCharacters.Select(c => new CharacterRuntime(c)).ToList();
         var enemyCharacters = m_enemyCharacters.Select(c => new CharacterRuntime(c)).ToList();
+        */
+
+        var battleManager = GameManager.Instance.GameContext.GetReference<BattleManager>();
+
+        var playerTeam = battleManager.BattleConfiguration.PlayerTeam;
+        var enemyTeam = battleManager.BattleConfiguration.EnemyTeam;
+
+        var playerCharacters = playerTeam.Select(c => new CharacterRuntime(c)).ToList();
+        var enemyCharacters = enemyTeam.Select(c => new CharacterRuntime(c)).ToList();
 
         StartCombat(playerCharacters, enemyCharacters);
     }
 
     public void EndCombat()
     {
-        GameManager.Instance.TriggerBattleEnded();
+        var battleManager = GameManager.Instance.GameContext.GetReference<BattleManager>();
+        battleManager.EndBattle(m_battleResult);
     }
 
+    public BattleResult GetBattleResult() => m_battleResult;
     public BattleCharacterView CurrentCharacterTurn => GetCharacterView(TurnManager.Current);
     public BattleCameraManager BattleCameraManager => m_battleCameraManager;
     public UIBattleHUDView UIBattleHUDView => m_battleHUDView;
