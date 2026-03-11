@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class GameManager : Singleton<GameManager>
@@ -8,42 +9,47 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private SocialLinkManager m_socialLinkManager;
     [SerializeField] private CameraManager m_cameraManager;
     [SerializeField] private MapManager m_mapManager;
+    [SerializeField] private DayManager m_dayManager;
     [SerializeField] private MainHUDView m_mainHUDView;
+
+    [Header("Events")]
+    public UnityEvent<GameContext> OnGameContextReady;
 
     [Header("Debug")]
     [SerializeField] private List<BaseContractSO> m_initialContracts;
     [SerializeField] private LevelDataSO m_popularityLevelSO;
 
 
-    private GameContext m_gameContext;
-
     private void Start()
     {
-        m_gameContext = new GameContext();
+        GameContext = new GameContext();
 
         LoadManagers();
 
-        m_mapManager.EnterLocation();
+        m_mapManager.Setup(GameContext);
         m_mainHUDView.Setup(this);
+
+        m_mapManager.EnterLocation();
     }
 
     private void LoadManagers()
     {
-        m_gameContext.AddReference(m_socialLinkManager);
-        m_gameContext.AddReference(m_cameraManager);
-        m_gameContext.AddReference(m_mapManager);
+        GameContext.AddReference(m_socialLinkManager);
+        GameContext.AddReference(m_cameraManager);
+        GameContext.AddReference(m_mapManager);
+        GameContext.AddReference(m_dayManager);
 
-        m_gameContext.AddReference(new PlayerManager());
+        GameContext.AddReference(new PlayerManager());
 
         var popularityLevelData = LevelFactory.CreateLevelData(m_popularityLevelSO);
         var guildData = new GuildData(popularityLevelData);
-        m_gameContext.AddReference(new GuildManager(guildData));
+        GameContext.AddReference(new GuildManager(guildData));
 
         var contracts = ContractFactory.CreateContractData(m_initialContracts);
-        m_gameContext.AddReference(new ContractManager(contracts, new List<BaseContractData>()));
+        GameContext.AddReference(new ContractManager(contracts, new List<BaseContractData>()));
 
-        m_mapManager.Setup(m_gameContext);
+        OnGameContextReady?.Invoke(GameContext);
     }
 
-    public GameContext GameContext => m_gameContext;
+    public GameContext GameContext { get; private set; }
 }
