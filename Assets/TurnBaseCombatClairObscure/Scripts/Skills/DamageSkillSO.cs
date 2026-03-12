@@ -19,8 +19,6 @@ public class DamageSkillSO : BaseSkillSO
 
             finalDamage = qteResult.Perfects == qteResult.EventAmount && qteResult.EventAmount != 0 ? (int)(finalDamage * m_bonusForPerfectQTE) : finalDamage;
 
-            Debug.Log($"{finalDamage} {qteResult.EventAmount} {qteResult.Perfects} {qteResult.Regulars} {qteResult.Misses}");
-
             targets.ForEach(t => t.TakeDamage(finalDamage));
 
             return SkillResultFactory.DamageTakenSkillResult(finalDamage);

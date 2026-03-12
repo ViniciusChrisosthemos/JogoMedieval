@@ -116,7 +116,6 @@ public class CombatManager : MonoBehaviour
 
         m_battleResult = new BattleResult(playerWin);
 
-        Debug.Log("CombatManager Endbattle");
         m_stateMachineController.ChangeState(new EndBattleState(this));
     }
 

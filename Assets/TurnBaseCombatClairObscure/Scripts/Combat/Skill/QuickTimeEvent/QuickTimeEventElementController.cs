@@ -93,8 +93,6 @@ public class QuickTimeEventElementController : MonoBehaviour
 
     private QuickTimeEventResultType HandleEventFailed()
     {
-        Debug.Log("Event Failed");
-
         m_animator.SetTrigger(m_eventFailedString);
         
         HasFinished = true;
@@ -104,8 +102,6 @@ public class QuickTimeEventElementController : MonoBehaviour
 
     private QuickTimeEventResultType HandleEventCompletedPerfect()
     {
-        Debug.Log("Event Completed Perfect");
-
         m_animator.SetTrigger(m_eventCompletedPerfectString);
 
         return QuickTimeEventResultType.Perfect;
@@ -113,8 +109,6 @@ public class QuickTimeEventElementController : MonoBehaviour
 
     private QuickTimeEventResultType HandleEventCompletedGood()
     {
-        Debug.Log("Event Completed Good");
-
         m_animator.SetTrigger(m_eventGoodString);
 
         return QuickTimeEventResultType.Regular;

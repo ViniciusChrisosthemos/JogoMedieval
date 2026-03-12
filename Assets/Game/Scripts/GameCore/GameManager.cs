@@ -76,8 +76,6 @@ public class GameManager : Singleton<GameManager>
 
     public async Task EndBattle()
     {
-        Debug.Log("BattleEnded");
-
         await GameContext.GetReference<CustomSceneManager>().UnloadBattleScene();
 
         m_cameraManager.Enable();

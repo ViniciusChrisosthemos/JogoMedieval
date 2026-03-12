@@ -51,8 +51,6 @@ public class QuestView : UIItemController
             var descriptionHeight = m_txtQuestDescription.preferredHeight;
             height += descriptionHeight;
 
-            Debug.Log($"{descriptionHeight} {m_descriptionTextHeight}");
-
             m_txtQuestDescription.rectTransform.sizeDelta = new Vector2(m_txtQuestDescription.rectTransform.sizeDelta.x, descriptionHeight);
         }
 
