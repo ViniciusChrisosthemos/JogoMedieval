@@ -38,14 +38,12 @@ public class UIListDisplay : MonoBehaviour
 
         for (int i = 0; i < itemCount; i++)
         {
-            var instance = GameObject.Instantiate(_itemPrefab, _itemParent);
+            var instance = InstantiateController();
 
             if (i < newItems.Count)
             {
                 instance.Init(newItems[i], onSelectItem);
             }
-
-            _controllers.Add(instance);
         }
 
         if (_usePaging)
@@ -61,6 +59,22 @@ public class UIListDisplay : MonoBehaviour
         }
 
         UpdatePage();
+    }
+
+
+    private UIItemController InstantiateController()
+    {
+        var instance = GameObject.Instantiate(_itemPrefab, _itemParent);
+
+        _controllers.Add(instance);
+
+        return instance;
+    }
+
+    public void AddItem<T>(T obj, Action<UIItemController> callback)
+    {
+        var instance = InstantiateController();
+        instance.Init(obj, callback);
     }
 
     private void UpdatePage()

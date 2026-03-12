@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ContractManager
 {
+    public event Action<BaseContractData> OnContractAdded;
+    public event Action<BaseContractData> OnContractCompleted;
+
     public List<BaseContractData> AvailableContracts { get; private set; }
     public List<BaseContractData> OngoingContracts { get; private set; }
 
@@ -25,6 +28,8 @@ public class ContractManager
     {
         AvailableContracts.Remove(contract);
         OngoingContracts.Add(contract);
+
+        OnContractAdded?.Invoke(contract);
     }
 
     public void CompleteContract(IGameContext gameContext, BaseContractData contract)
@@ -35,6 +40,8 @@ public class ContractManager
         var playerManager = gameContext.GetReference<PlayerManager>();
         playerManager.AddGold(contract.RewardData.Gold);
         playerManager.AddExperience(contract.RewardData.Exp);
+
+        OnContractCompleted?.Invoke(contract);
     }
 
     public void RefuseContract(BaseContractData contract)

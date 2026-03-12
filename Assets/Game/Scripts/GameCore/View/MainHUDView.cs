@@ -14,10 +14,6 @@ public class MainHUDView : MonoBehaviour
         m_btnGoBack.interactable = false;
     }
 
-    private void Start()
-    {
-    }
-
     private void HandleGoBackEvent()
     {
         var mapManager = m_gameManager.GameContext.GetReference<MapManager>();

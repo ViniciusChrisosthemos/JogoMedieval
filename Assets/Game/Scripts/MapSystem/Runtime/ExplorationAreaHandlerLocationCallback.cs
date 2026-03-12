@@ -69,7 +69,6 @@ public class ExplorationAreaHandlerLocationCallback : AbstractLocationCallback
     {
         var isAvailable = m_dependecies.All(handler => handler.AreaLocationData.IsCompleted) || m_dependecies.Count == 0;
 
-        Debug.Log($"{name} {isAvailable}");
         SetAreaLocked(!isAvailable);
     }
 

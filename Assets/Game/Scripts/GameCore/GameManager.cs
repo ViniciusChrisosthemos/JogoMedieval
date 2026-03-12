@@ -18,7 +18,6 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private CameraManager m_cameraManager;
     [SerializeField] private MapManager m_mapManager;
     [SerializeField] private DayManager m_dayManager;
-    [SerializeField] private MainHUDView m_mainHUDView;
     [SerializeField] private UIManager m_uiManager;
 
     [Header("Events")]
@@ -37,7 +36,7 @@ public class GameManager : Singleton<GameManager>
         LoadManagers();
 
         m_mapManager.Setup(GameContext);
-        m_mainHUDView.Setup(this);
+        m_uiManager.Setup(this);
 
         m_mapManager.EnterLocation();
     }

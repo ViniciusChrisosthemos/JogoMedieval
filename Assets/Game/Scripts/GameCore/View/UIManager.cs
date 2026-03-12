@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] private MainHUDView m_mainHUDView;
     [SerializeField] private ExplorationSpotHUDView m_explorationView;
+    [SerializeField] private UIQuestManagerView m_questManagerView;
 
     public void OpenExplorationView(ExplorationAreaHandlerLocationCallback handler)
     {
@@ -13,5 +15,11 @@ public class UIManager : MonoBehaviour
     public void CloseExplorationView()
     {
         m_explorationView.CloseScreen();
+    }
+
+    public void Setup(GameManager gameManager)
+    {
+        m_mainHUDView.Setup(gameManager);
+        m_questManagerView.Setup(gameManager);
     }
 }
