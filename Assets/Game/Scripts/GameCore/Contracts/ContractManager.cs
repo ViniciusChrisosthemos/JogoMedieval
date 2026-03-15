@@ -35,11 +35,13 @@ public class ContractManager
     public void CompleteContract(IGameContext gameContext, BaseContractData contract)
     {
         var guildManager = gameContext.GetReference<GuildManager>();
-        guildManager.AddPopularity(contract.RewardData.Popularity);
+
+        var rewardData = RewardManager.GetReward(contract.RewardParameters);
+
+        guildManager.AddPopularity(rewardData.Popularity);
 
         var playerManager = gameContext.GetReference<PlayerManager>();
-        playerManager.AddGold(contract.RewardData.Gold);
-        playerManager.AddExperience(contract.RewardData.Exp);
+        playerManager.CommitReward(rewardData);
 
         OnContractCompleted?.Invoke(contract);
     }

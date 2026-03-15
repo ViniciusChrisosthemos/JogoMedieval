@@ -10,6 +10,8 @@ public class ExplorationSpotHUDView : BaseUIInterface
     [SerializeField] private TextMeshProUGUI m_levels;
     [SerializeField] private Button m_btnExplore;
 
+    [SerializeField] private ExplorationResultView m_explorationResultView;
+
     private ExplorationAreaHandlerLocationCallback m_handler;
 
     private void Awake()
@@ -28,6 +30,11 @@ public class ExplorationSpotHUDView : BaseUIInterface
             case BattleAreaEventSO battleAreaEventSO: m_handler.HandleBattleAreaEvent(battleAreaEventSO); break;
             default: break;
         }
+    }
+
+    public void ShowRewardData(RewardData rewardData, Action callback)
+    {
+        m_explorationResultView.OpenScreen(rewardData, callback);
     }
 
     public void Setup(ExplorationAreaHandlerLocationCallback explorationAreaHandler)

@@ -47,17 +47,26 @@ public class ExplorationAreaHandlerLocationCallback : AbstractLocationCallback
 
     private void HandleBattleResult(BattleResult battleResult)
     {
-        var battleManager = GameManager.Instance.GameContext.GetReference<BattleManager>();
+        var gameContext = GameManager.Instance.GameContext;
+        var battleManager = gameContext.GetReference<BattleManager>();
+
         battleManager.OnBattleEnded -= HandleBattleResult;
 
         if (battleResult.PlayerWin)
         {
+            var rewardParameters = AreaLocationData.GetRewardParameters();
             AreaLocationData.CompleteEvent();
 
             m_regionView.UpdateHandlers();
-        }
 
-        HandleEnterLocation(GameManager.Instance.GameContext);
+            var rewardData = RewardManager.GetReward(rewardParameters, battleResult);
+
+            var playerManager = gameContext.GetReference<PlayerManager>();
+            playerManager.CommitReward(rewardData);
+
+            var uiManager = gameContext.GetReference<UIManager>();
+            uiManager.ExplorationView.ShowRewardData(rewardData, () => HandleEnterLocation(gameContext));
+        }
     }
 
     public void SetAreaLocked(bool isLocked)

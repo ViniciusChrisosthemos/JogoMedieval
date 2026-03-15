@@ -15,4 +15,4 @@ MonoBehaviour:
   m_id: wolf_fang
   m_name: Wolf Fang
   m_description: Wolf Fang
-  m_icon: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: f85fec335f57a814b81606ecc21f485b, type: 3}

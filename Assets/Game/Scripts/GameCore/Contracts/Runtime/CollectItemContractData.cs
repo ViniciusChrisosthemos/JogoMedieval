@@ -8,7 +8,7 @@ public class CollectItemContractData : BaseContractData
 
     public List<ObjectAmountData<BaseItem>> RequiredItems {  get; private set; }
 
-    public CollectItemContractData(string title, string baseDescription, RewardData rewardData, List<ObjectAmountData<BaseItem>> requiredItens) : base(title, baseDescription, rewardData)
+    public CollectItemContractData(string title, string baseDescription, RewardParameters rewardData, List<ObjectAmountData<BaseItem>> requiredItens) : base(title, baseDescription, rewardData)
     {
         RequiredItems = requiredItens;
     }

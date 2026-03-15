@@ -22,4 +22,6 @@ public class UIManager : MonoBehaviour
         m_mainHUDView.Setup(gameManager);
         m_questManagerView.Setup(gameManager);
     }
+
+    public ExplorationSpotHUDView ExplorationView => m_explorationView;
 }

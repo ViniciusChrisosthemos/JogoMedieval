@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbaf3b1f74474c747aac8de899316ac7, type: 3}
-  m_Name: Ingredient_BoarFang
+  m_Name: Ingredient_BoarMeat
   m_EditorClassIdentifier: 
-  m_id: boar_fang
-  m_name: Boar Fang
-  m_description: Boar Fang
-  m_icon: {fileID: 0}
+  m_id: boar_meat
+  m_name: Boar Meat
+  m_description: Boar Meat
+  m_icon: {fileID: 21300000, guid: 60170f4f256d4ae46ba05b50b635aa0d, type: 3}

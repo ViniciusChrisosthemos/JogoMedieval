@@ -1,14 +1,19 @@
-using System;
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
 public class RewardData
 {
-    [SerializeField] private int m_gold;
-    [SerializeField] private int m_exp;
-    [SerializeField] private int m_popularity;
+    public int Gold {  get; private set; }
+    public int Exp { get; private set; }
+    public int Popularity { get; private set; }
+    public List<ItemHolder> Items { get; private set; }
 
-    public int Gold => m_gold;
-    public int Exp => m_exp;
-    public int Popularity => m_popularity;
+    public RewardData(int gold, int exp, int popularity, List<ItemHolder> items)
+    {
+        Gold = gold; 
+        Exp = exp;
+        Popularity = popularity;
+        Items = items;
+    }
 }

@@ -4,13 +4,13 @@ public abstract class BaseContractData
 {
     public string Title { get; private set; }
     protected string BaseDescription { get; private set; }
-    public RewardData RewardData { get; private set; }
+    public RewardParameters RewardParameters { get; private set; }
 
-    public BaseContractData(string title, string baseDescription, RewardData rewardData)
+    public BaseContractData(string title, string baseDescription, RewardParameters rewardData)
     {
         Title = title;
         BaseDescription = baseDescription;
-        RewardData = rewardData;
+        RewardParameters = rewardData;
     }
 
     public abstract bool CheckConditions(IGameContext gameContext);

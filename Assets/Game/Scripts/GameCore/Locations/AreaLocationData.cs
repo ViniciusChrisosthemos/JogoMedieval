@@ -27,4 +27,9 @@ public class AreaLocationData
     {
         CurrentExplorationAmount++;
     }
+
+    public RewardParameters GetRewardParameters()
+    {
+        return CurrentEvent.GetRewardParamters();
+    }
 }

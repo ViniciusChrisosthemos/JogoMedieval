@@ -15,4 +15,4 @@ MonoBehaviour:
   m_id: wolf_fur
   m_name: Wolf Fur
   m_description: Wolf Fur
-  m_icon: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: 00bc8548eb557184eac93c07a625a2c8, type: 3}

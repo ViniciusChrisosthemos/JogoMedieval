@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbaf3b1f74474c747aac8de899316ac7, type: 3}
-  m_Name: Ingredient_BoarFur
+  m_Name: Ingredient_BoarBone
   m_EditorClassIdentifier: 
-  m_id: boar_fur
-  m_name: Boar Fur
-  m_description: Boar Fur
-  m_icon: {fileID: 0}
+  m_id: boar_bone
+  m_name: Boar Bone
+  m_description: Boar Bone
+  m_icon: {fileID: 21300000, guid: 429a7e70ef4521841ae4d4a7bc05bf8c, type: 3}

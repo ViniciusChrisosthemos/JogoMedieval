@@ -25,6 +25,11 @@ public class PlayerManager
 
     }
 
+    public void CommitReward(RewardData reward)
+    {
+
+    }
+
     public int Gold { get; private set; }
     public List<CharacterSO> PlayerTeam { get; private set; }
 }

@@ -13,9 +13,38 @@ MonoBehaviour:
   m_Name: 1_1_BattleAreaEvent_BoarAttack
   m_EditorClassIdentifier: 
   m_narratives: []
+  m_rewardParameters:
+    m_gold: 0
+    m_exp: 15
+    m_popularity: 0
+    m_drops:
+    - MinAmount: 3
+      MaxAmount: 3
+      AmountCurveProbability:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      Probability: 0.45
+      Item: {fileID: 11400000, guid: 4e750b919ce5dbb4f86f75cb67b29003, type: 2}
   m_enemies:
   - {fileID: 11400000, guid: c72c06282898ac54d80d1705cbee2214, type: 2}
-  m_reward:
-    m_gold: 0
-    m_exp: 0
-    m_popularity: 0
